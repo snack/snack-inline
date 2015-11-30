@@ -1,0 +1,217 @@
+/*  ==========================================================================
+    Inputs
+    ========================================================================== */
+
+    /*
+     * CSS for all devices
+     */
+
+    @media only screen {
+
+        /*  Default inputs, selects and textareas
+            ========================================================================== */
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            input[type="search"],
+            input[type="tel"],
+            input[type="url"],
+            input[type="date"],
+            input[type="datetime"],
+            input[type="datetime-local"],
+            input[type="month"],
+            input[type="week"],
+            .input,
+            select,
+            .select,
+            textarea,
+            .textarea {
+                width: 100%;
+                padding: 12px 10px;
+                border-width: 1px;
+                border-style: solid;
+                border-color: transparent;
+                background-color: #fff;
+                color: $color-input;
+                font-size: 14px;
+                margin-bottom: 15px;
+                @include transition(all .25s ease);
+                @include border-radius(2px);
+            }
+
+            input:focus,
+            .input:focus,
+            select:focus,
+            .select:focus,
+            textarea:focus,
+            .textarea:focus {
+                background-color: #F2F1EF;
+                outline-width: 0;
+            }
+
+        /*  Select
+            ========================================================================== */
+            .select{
+                /* -webkit-appearance: none;
+                   -moz-appearance: none;
+                        appearance: none; */
+
+                color: $color-placeholder;
+                font-style: italic;
+                opacity: 1;
+                font-size: $placeholder-font-size;
+
+                &[value=""]{
+                    color: #BFBFBF;
+                    font-style: italic;
+                }
+            }
+
+        /*  Search
+            ========================================================================== */
+            .input[type="search"] {
+                box-sizing: border-box;
+            }
+
+        /*  Textarea
+            ========================================================================== */
+            .textarea { resize: vertical; }
+
+        /*  Input radio and checkbox
+            ========================================================================== */
+            .radio,
+            .checkbox {
+                margin-bottom: 6px;
+                display: block;
+                color: $color-input;
+
+                .form-label,
+                input[type="radio"],
+                input[type="checkbox"]{
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin: 0 2px 0 0;
+                }
+            }
+
+            .radio input[type="radio"],
+            .checkbox input[type="checkbox"] {
+                width: auto;
+            }
+
+            input[type="radio"],
+            input[type="checkbox"] {
+                line-height: normal;
+                margin: 4px 0 0;
+            }
+
+        /*  Placeholder
+            ========================================================================== */
+            input::-webkit-input-placeholder,
+            textarea::-webkit-input-placeholder {
+                color: $color-placeholder;
+                font-style: italic;
+                opacity: 1;
+                font-size: $placeholder-font-size;
+            }
+
+            input:-moz-placeholder,
+            textarea:-moz-placeholder {
+                color: $color-placeholder;
+                font-style: italic;
+                opacity: 1;
+                font-size: $placeholder-font-size;
+            }
+
+            input::-moz-placeholder,
+            textarea::-moz-placeholder {
+                color: $color-placeholder;
+                font-style: italic;
+                opacity: 1;
+                font-size: $placeholder-font-size;
+            }
+
+            input:-ms-input-placeholder,
+            textarea:-ms-input-placeholder {
+                color: $color-placeholder;
+                font-style: italic;
+                opacity: 1;
+                font-size: $placeholder-font-size;
+            }
+
+    }
+
+
+    /*
+     * CSS for devices with resolution up to a maximum of breakpoint
+     */
+
+    @media only screen and (max-width: $breakpoint) {
+
+        /*  Default inputs, selects and textareas
+            ========================================================================== */
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            input[type="search"],
+            input[type="tel"],
+            input[type="url"],
+            input[type="date"],
+            input[type="datetime"],
+            input[type="datetime-local"],
+            input[type="month"],
+            input[type="week"],
+            .input,
+            select,
+            .select,
+            textarea,
+            .textarea {
+                border-bottom-color: $color-border-input;
+            }
+
+            input:focus,
+            .input:focus,
+            select:focus,
+            .select:focus,
+            textarea:focus,
+            .textarea:focus {
+                border-bottom-color: darken($color-border-input, 25%);
+            }
+    }
+
+
+    /*
+     * CSS for devices with resolution up to the minimum breakpoint
+     */
+
+    @media only screen and (min-width: $breakpoint+1) {
+
+        /*  Default inputs, selects and textareas
+            ========================================================================== */
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            input[type="search"],
+            input[type="tel"],
+            input[type="url"],
+            input[type="date"],
+            input[type="datetime"],
+            input[type="datetime-local"],
+            input[type="month"],
+            input[type="week"],
+            .input,
+            select,
+            .select,
+            textarea,
+            .textarea {
+                border-color: $color-border-input;
+            }
+
+            input:focus,
+            select:focus,
+            .select:focus,
+            textarea:focus,
+            .textarea:focus {
+                border-color: darken($color-border-input, 25%);
+            }
+    }

@@ -1,0 +1,89 @@
+/*  ==========================================================================
+    Forms
+    ========================================================================== */
+
+    /*
+     * CSS for all devices
+     */
+
+    @media only screen {
+
+        /*  Default
+            ========================================================================== */
+            .form{
+                margin-bottom: 20px;
+                fieldset {
+                    border: none;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+
+            .form-label {
+                display: inline-block;
+                color: $color-required;
+                font-size: $required-font-size;
+                line-height: 14px;
+                margin-bottom: 4px;
+            }
+
+        /*  Required tip
+            ========================================================================== */
+            .fields-required {
+                color: $color-required-tip;
+                display: block;
+                font-size: $required-tip-font-size;
+                margin-bottom: 20px;
+            }
+
+            .required {
+                font-weight: bold;
+                color: $color-required;
+            }
+
+            .form-field {
+                color: $color-required;
+                font-size: $required-font-size;
+            }
+
+    }
+
+
+    /*
+     * CSS for devices with resolution up to a maximum of breakpoint
+     */
+
+    @media only screen and (max-width: $breakpoint) {
+
+    }
+
+
+    /*
+     * CSS for devices with resolution up to the minimum breakpoint
+     */
+
+    @media only screen and (min-width: $breakpoint+1) {
+
+        /*  Form Search
+            ========================================================================== */
+            .form-search{
+                font-size: 0;
+
+                input{
+                    width: 75%;
+                    vertical-align: middle;
+                    margin: 0;
+                }
+
+                input + input{
+                    width: 24%;
+                    margin-left: 1%;
+                }
+
+                .form-label{display: block;}
+
+                .btn{
+                    padding: 12px 4px;
+                }
+            }
+    }
